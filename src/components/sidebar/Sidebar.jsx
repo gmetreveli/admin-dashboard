@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./sidebar.css";
 import {
   LineStyle,
@@ -23,7 +24,9 @@ export default function Sidebar() {
           <ul className="sidebarList">
             <li className="sidebarListItem active">
               <LineStyle className="sidebarIcon" />
-              Home
+              <Link className="link" to={"/"}>
+                Home
+              </Link>
             </li>
             <li className="sidebarListItem">
               <Timeline className="sidebarIcon" />
@@ -41,7 +44,9 @@ export default function Sidebar() {
           <ul className="sidebarList">
             <li className="sidebarListItem">
               <PermIdentity className="sidebarIcon" />
-              Users
+              <Link className="link" to={"/users"}>
+                Users
+              </Link>
             </li>
             <li className="sidebarListItem">
               <Storefront className="sidebarIcon" />
